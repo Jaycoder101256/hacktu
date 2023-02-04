@@ -21,7 +21,7 @@
     <main>
       <h2>Featured Campaign</h2>
       <div class="campaign-card">
-        <img src="campaign-image.jpg" alt="Campaign Image">
+        <img src="../hacktu/campaignimage.jpeg" alt="Campaign Image">
         <h3>Campaign Title</h3>
         <p>Campaign description goes here</p>
         <a href="#">Learn More</a>
@@ -29,7 +29,7 @@
       <div class="hero">
 
         <video autoplay loop muted plays-inline >
-            <source src=" ">                                                    //background video
+            <source src="">                                                    //background video
         </video>
 
         <img src="" class="menu-icon">
@@ -87,7 +87,25 @@
       <p>&copy;2023 Crowdfunding Website</p>
     </footer>
 
-    <script> </script>
+    <script>
+    let backvideo = document.getElementById("backvideo");
+    let btn = document.getElementById("btn");
+
+    btn.oneclick = function(){
+      backvideo.style.display = "block";      
+                      
+      if(backvideo.paused){
+        backvideo.play();
+        btn.src = "images/pause.png"
+      }
+      else{
+        backvideo.pause();      
+        btn.src = "images/play.png"
+      }
+      }  
+    
+    
+    </script>
 
 
 
